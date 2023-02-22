@@ -1,6 +1,15 @@
 .header {
     display: flex;
-    padding: 5px;
-    gap: 10px;
-    outline: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--default-spacing);
+
+    height: var(--header-height);
+    padding: 0px var(--default-spacing);
+    background-color: var(--sr-palette-extra-light-grey);
+
+    &__nav {
+        display: flex;
+        gap: var(--default-spacing);
+    }
 }
