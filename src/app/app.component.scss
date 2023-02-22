@@ -1,3 +1,5 @@
 .app-container {
-    padding: 15px;
+    padding: var(--default-spacing);
+    height: calc(100vh - var(--header-height));
+    background-color: var(--sr-palette-white);
 }
