@@ -1,78 +1,24 @@
-// CSS RESET
+@import './reset.scss';
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+:root {
+    --sr-palette-black: #1E1E1E;
+    --sr-palette-dark-grey: #646464;
+    --sr-palette-light-grey: #C8C8C8;
+    --sr-palette-extra-light-grey: #F0F0F0;
+    --sr-palette-white: #FAFAFA;
+    --sr-palette-red: #FF9696;
+    --sr-palette-green: #C8FFC8;
+    --sr-palette-blue: #64C8FF;
+    --sr-palette-purple: #C896FF;
+
+    --default-spacing: 15px;
+
+    --header-height: 50px;
 }
 
-/*
-    2. Remove default margin
-*/
-* {
-    margin: 0;
-}
-
-/*
-    3. Allow percentage-based heights in the application
-*/
-html,
-body {
-    height: 100%;
-}
-
-/*
-    Typographic tweaks!
-    4. Add accessible line-height
-    5. Improve text rendering
-*/
-body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
-
-/*
-    6. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-/*
-    7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/*
-    8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-/*
-    9. Create a root stacking context
-*/
-#root,
-#__next {
-    isolation: isolate;
+.app-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-spacing);
+    align-items: center;
 }
