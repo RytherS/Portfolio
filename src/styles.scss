@@ -16,6 +16,10 @@
     --header-height: 50px;
 }
 
+html, body {
+    background-color: var(--sr-palette-white);
+}
+
 .app-content {
     display: flex;
     flex-direction: column;
