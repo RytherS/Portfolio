@@ -27,6 +27,14 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
+  },
+  {
+    path: 'error',
+    loadChildren: () => import('./modules/error/error.module').then(m => m.ErrorModule)
+  },
+  {
+    path: '*',
+    redirectTo: 'error'
   }
 ];
 
