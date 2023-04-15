@@ -1,4 +1,5 @@
-@import './reset.scss';
+@use './reset.scss';
+@use './fonts.scss';
 
 :root {
     --sr-palette-black: #1E1E1E;
@@ -14,6 +15,10 @@
     --default-spacing: 15px;
 
     --header-height: 50px;
+}
+
+* {
+    font-family: 'Typewriter';
 }
 
 html, body {
