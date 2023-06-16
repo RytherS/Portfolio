@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './components';
 import { RouterModule } from '@angular/router';
+import { PersonalLogoModule } from '../personal-logo/personal-logo.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    PersonalLogoModule
   ],
   exports: [
     HeaderComponent

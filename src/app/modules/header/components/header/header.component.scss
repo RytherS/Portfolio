@@ -10,6 +10,12 @@
 
     &__nav {
         display: flex;
+        align-items: center;
         gap: var(--default-spacing);
+    }
+
+    &__logo {
+        height: var(--header-height);
+        width: var(--header-height);
     }
 }
