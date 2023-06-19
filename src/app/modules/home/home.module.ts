@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LoadingSpinnerModule } from '../shared/loading-spinner/loading-spinner.module';
-
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components';
 
@@ -13,8 +11,7 @@ import { HomeComponent } from './components';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
-    LoadingSpinnerModule
+    HomeRoutingModule
   ]
 })
 export class HomeModule { }

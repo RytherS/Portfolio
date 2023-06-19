@@ -1,5 +1,5 @@
 .app-container {
     padding: var(--default-spacing);
     height: calc(100vh - var(--header-height));
-    overflow: scroll;
+    overflow: auto;
 }
