@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "projectId": "592360f3-48e5-4d6d-9c89-35017b2f3a71",
+        "title": "Spectre3D",
+        "summary": "3D-scanning applications on iOS, Android, and the web.",
+        "media": {}
+    },
+    {
+        "id": 2,
+        "projectId": "44730b76-c30d-45bd-87a4-9a4765999b59",
+        "title": "Lead Generation System",
+        "summary": "Real estate monitoring software for regaining lost clients.",
+        "media": {}
+    },
+    {
+        "id": 3,
+        "projectId": "d66e7555-28bf-438b-8154-b0be25f5867e",
+        "title": "Planet Partner",
+        "summary": "Physics-based mobile puzzle game created in Unity.",
+        "media": {}
+    },
+    {
+        "id": 4,
+        "projectId": "04bc44e2-2224-4f61-a6d6-24a8e123d5b6",
+        "title": "Cell Shift",
+        "summary": "First-person puzzle game created in Unreal Engine 4.",
+        "media": {}
+    },
+    {
+        "id": 5,
+        "projectId": "6e424c33-0877-4033-8cae-b763a192b32d",
+        "title": "Project Prototypical",
+        "summary": "Multiplayer PvP game created in Unity featuring a custom-built camera system and a hand-crafted environment.",
+        "media": {}
+    }
+]
