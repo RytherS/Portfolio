@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "projectId": "592360f3-48e5-4d6d-9c89-35017b2f3a71",
+        "title": "Spectre3D",
+        "description": "I had the privilege of working with an incredible team to create 3D-scanning applications for both iOS and Andriod devices using Xamarin Forms/C#, as well as accompanying web apps using Angular/TypeScript. All of these technologies were hooked into an Azure-hosted API, providing a uniform and stable experience across our supported platforms.",
+        "media": []
+    },
+    {
+        "id": 2,
+        "projectId": "44730b76-c30d-45bd-87a4-9a4765999b59",
+        "title": "Lead Generation System",
+        "description": "My team and I partnered up with Pointe Pest Control to create an Azure function app using C# and various API's that is responsible for capturing potential leads to regain lost customers. Upon completion, the project was estimated to generate an additional $60,000 in revenue per year!",
+        "media": []
+    },
+    {
+        "id": 3,
+        "projectId": "d66e7555-28bf-438b-8154-b0be25f5867e",
+        "title": "Planet Partner",
+        "description": "A fun, physics-based puzzle game in which players have to shoot planets into the correct wormhole by using the gravity of other wormholes nearby to slingshot around obstacles. Despite being made entirely on my own in only two weeks, the level of polish I was able to achieve makes this one of my favorite Unity projects that I have worked on to date.",
+        "media": []
+    },
+    {
+        "id": 4,
+        "projectId": "04bc44e2-2224-4f61-a6d6-24a8e123d5b6",
+        "title": "Cell Shift",
+        "description": "Cell Shift was a group project in which we decided to make a blueprinted Unreal Engine 4 project. It is a simple puzzle game in which the player slowly unlocks different abilities that help them solve various puzzles and escape the facility that they are trapped in. This was one of the first couple of projects in UE4 that I worked on, so it was awesome to see it come together so well in a mere two weeks.",
+        "media": []
+    },
+    {
+        "id": 5,
+        "projectId": "6e424c33-0877-4033-8cae-b763a192b32d",
+        "title": "Project Prototypical",
+        "description": "A Resident Evil inspired game built in Unity that utilizes a custom-built fixed-camera system used to highlight the detailed, hand-crafted environment that it takes place in. Players can go head to head in split-screen multiplayer as they try to find the weapons hidden around the house and take each other out to be the last one standing.",
+        "media": []
+    }
+]
