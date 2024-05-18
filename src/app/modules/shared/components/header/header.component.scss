@@ -11,7 +11,6 @@
     &__nav {
         display: flex;
         align-items: center;
-        //gap: var(--default-spacing);
     }
 
     &__logo {
@@ -22,20 +21,19 @@
     &__tab {
         width: 200px;
         height: var(--header-height);
-        border: 1px solid var(--sr-palette-light-grey);
         color: var(--sr-palette-white);
         display: flex;
-        cursor: pointer;
         justify-content: center;
         align-items: center;
         gap: 5px;
+        cursor: pointer;
 
-        & > .bracket-string {
+        & > .html-bracket {
             color: var(--sr-palette-red);
         }
 
-        a {
-            color: var(--sr-palette-white);
+        &:not(:last-of-type) {
+            border-right: solid 1px var(--sr-palette-dark-grey);
         }
     }
 }

@@ -8,7 +8,7 @@
             *ngFor="let routeMapping of navRouteMappings | keyvalue"
             class="header__tab"
             (click)="onNavTabClicked(routeMapping.key)">
-            <p class="bracket-string">{{bracketString}}</p>
+            <p class="html-bracket">{{bracketString}}</p>
             <p>{{routeMapping.value}}.html</p>
         </span>
     </div>
