@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--default-spacing);
+
+    height: var(--header-height);
+    padding: 0px var(--default-spacing);
+    background-color: var(--sr-palette-black);
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        //gap: var(--default-spacing);
+    }
+
+    &__logo {
+        height: var(--header-height);
+        width: var(--header-height);
+    }
+
+    &__tab {
+        width: 200px;
+        height: var(--header-height);
+        border: 1px solid var(--sr-palette-light-grey);
+        color: var(--sr-palette-white);
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        & > .bracket-string {
+            color: var(--sr-palette-red);
+        }
+
+        a {
+            color: var(--sr-palette-white);
+        }
+    }
+}

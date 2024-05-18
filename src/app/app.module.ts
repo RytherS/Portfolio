@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderModule } from './modules';
+import { SharedModule } from './modules';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { HeaderModule } from './modules';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
