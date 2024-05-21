@@ -5,7 +5,7 @@
         </div>
 
         <span
-            *ngFor="let routeMapping of navRouteMappings | keyvalue"
+            *ngFor="let routeMapping of navRouteMappings | keyvalue : originalOrder"
             class="header__tab"
             (click)="onNavTabClicked(routeMapping.key)">
             <p class="html-bracket">{{bracketString}}</p>

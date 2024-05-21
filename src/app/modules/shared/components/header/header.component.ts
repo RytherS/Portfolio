@@ -22,4 +22,8 @@ export class HeaderComponent {
   public onNavTabClicked(route: string): void {
     this.router.navigate([route])
   }
+
+  public originalOrder(a: any, b: any): number {
+    return 0;
+  }
 }
