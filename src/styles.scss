@@ -3,6 +3,7 @@
 
 :root {
     --sr-palette-black: #1E1E1E;
+    --sr-palette-extra-dark-grey: #3b3b3b;
     --sr-palette-dark-grey: #646464;
     --sr-palette-light-grey: #C8C8C8;
     --sr-palette-extra-light-grey: #F0F0F0;
@@ -22,12 +23,19 @@
 }
 
 html, body {
-    background-color: var(--sr-palette-dark-grey);
+    background-color: var(--sr-palette-extra-dark-grey);
+    color: var(--sr-palette-white);
+    font-size: 14px;
 }
 
 .app-content {
     display: flex;
     flex-direction: column;
     gap: var(--default-spacing);
-    align-items: center;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: scale-down;
 }

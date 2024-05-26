@@ -5,8 +5,9 @@
     gap: var(--default-spacing);
 
     height: var(--header-height);
-    padding: 0px var(--default-spacing);
+    padding-right: var(--default-spacing);
     background-color: var(--sr-palette-black);
+    border-bottom: 1px solid var(--sr-palette-dark-grey);
 
     &__nav {
         display: flex;
@@ -25,6 +26,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-right: solid 1px var(--sr-palette-dark-grey);
         gap: 5px;
         cursor: pointer;
 
@@ -32,8 +34,8 @@
             color: var(--sr-palette-red);
         }
 
-        &:not(:last-of-type) {
-            border-right: solid 1px var(--sr-palette-dark-grey);
+        &:hover {
+            background-color: var(--sr-palette-extra-dark-grey);
         }
     }
 }
