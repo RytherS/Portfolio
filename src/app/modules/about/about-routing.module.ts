@@ -6,9 +6,9 @@ import { AboutComponent } from './components';
 
 const routes: Routes = [
     {
-        path: '',
+        path: "",
         component: AboutComponent
-    }
+    },
 ];
 
 @NgModule({
