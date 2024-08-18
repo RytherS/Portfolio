@@ -34,7 +34,7 @@
             color: var(--sr-palette-red);
         }
 
-        &:hover {
+        &:hover, &--active {
             background-color: var(--sr-palette-extra-dark-grey);
         }
     }
