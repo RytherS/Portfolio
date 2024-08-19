@@ -18,7 +18,7 @@
     "rules": {
         "indent": [
             "warn",
-            "tab"
+            "space"
         ],
         "linebreak-style": [
             "warn",

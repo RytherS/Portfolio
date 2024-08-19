@@ -28,7 +28,7 @@ export const selectRouteRoot = createSelector(
 		// Regex for splitting up the url at slashes
 		// i.e. '/docs/setup/blahblah?something=someValue' -> ['/docs', '/setup', '/blahblah']
 		// Selecting the first index of this list will then be the root of the current route (i.e. '/docs')
-		const root = (url.match(/\/[A-z]*(?=[/?])?/) ?? [""])[0];
+		const root = (url?.match(/\/[A-z]*(?=[/?])?/) ?? [""])[0];
 		return root;
 	}
 );
