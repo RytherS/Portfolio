@@ -1,5 +1,8 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { RouterSelectors } from "@core/state/router-state";
+import { Store } from "@ngrx/store";
+import { Observable, tap } from "rxjs";
 
 
 @Component({
@@ -7,8 +10,11 @@ import { Router } from "@angular/router";
 	templateUrl: "./header.component.html",
 	styleUrls: ["./header.component.scss"]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 	private router: Router = inject(Router);
+	private store: Store = inject(Store);
+
+	public currentRootRoute$!: Observable<string>;
 
 	public readonly bracketString = "<>";
 
@@ -19,11 +25,15 @@ export class HeaderComponent {
 		[ "/about", "About" ],
 	]);
 
+	public ngOnInit(): void {
+		this.currentRootRoute$ = this.store.select(RouterSelectors.selectRouteRoot);
+	}
+
 	public onNavTabClicked(route: string): void {
 		this.router.navigate([route]);
 	}
 
-  // Sorting function for header links to remain in the order they are defined in navRouteMappings up above
+  	// Sorting function for header links to remain in the order they are defined in navRouteMappings up above
 	public originalOrder(): number {
 		return 0;
 	}

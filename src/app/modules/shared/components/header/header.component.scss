@@ -34,8 +34,13 @@
             color: var(--sr-palette-red);
         }
 
-        &:hover, &--active {
+        &:hover {
             background-color: var(--sr-palette-extra-dark-grey);
+        }
+
+        &--active {
+            background-color: var(--sr-palette-extra-dark-grey);
+            font-weight: bold;
         }
     }
 }
