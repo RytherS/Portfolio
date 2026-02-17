@@ -1,10 +1,8 @@
-<ng-container *ngIf="{
-    routeRoot: tempRootRoute$ | async
-} as pageData">
-
-<div class="app-content">
+@if ({
+  routeRoot: tempRootRoute$ | async
+  }; as pageData) {
+  <div class="app-content">
     <p>about works!</p>
     <p>Root Route: {{pageData.routeRoot}}</p>
-</div>
-
-</ng-container>
+  </div>
+}
