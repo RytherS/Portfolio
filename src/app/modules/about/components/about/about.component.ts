@@ -4,9 +4,10 @@ import { Observable } from "rxjs";
 import { RouterSelectors } from "@core/state/router-state";
 
 @Component({
-	selector: "sr-about",
-	templateUrl: "./about.component.html",
-	styleUrls: ["./about.component.scss"]
+    selector: "sr-about",
+    templateUrl: "./about.component.html",
+    styleUrls: ["./about.component.scss"],
+    standalone: false
 })
 export class AboutComponent {
 	private store: Store = inject(Store);

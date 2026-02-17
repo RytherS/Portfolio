@@ -6,9 +6,10 @@ import { Observable, tap } from "rxjs";
 
 
 @Component({
-	selector: "sr-header",
-	templateUrl: "./header.component.html",
-	styleUrls: ["./header.component.scss"]
+    selector: "sr-header",
+    templateUrl: "./header.component.html",
+    styleUrls: ["./header.component.scss"],
+    standalone: false
 })
 export class HeaderComponent implements OnInit {
 	private router: Router = inject(Router);
