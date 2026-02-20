@@ -1,17 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PortfolioRoutingModule } from './portfolio-routing.module';
+import { NgModule } from '@angular/core';
 import { PortfolioComponent } from './components';
-
+import { PortfolioRoutingModule } from './portfolio-routing.module';
 
 @NgModule({
-  declarations: [
-    PortfolioComponent
-  ],
-  imports: [
-    CommonModule,
-    PortfolioRoutingModule,
-  ]
+	imports: [CommonModule, PortfolioRoutingModule, PortfolioComponent],
 })
-export class PortfolioModule { }
+export class PortfolioModule {}

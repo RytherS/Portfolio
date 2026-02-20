@@ -1,8 +1,7 @@
-import { RouterReducerState } from "@ngrx/router-store";
+import { RouterReducerState } from '@ngrx/router-store';
 
-
-export const ROUTER_FEATURE_KEY = "router";
+export const ROUTER_FEATURE_KEY = 'router';
 
 export interface RouterState {
-    routerState: RouterReducerState;
+	routerState: RouterReducerState;
 }
