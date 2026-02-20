@@ -2,12 +2,13 @@ import { Component, inject } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import { RouterSelectors } from "@core/state/router-state";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
     selector: "sr-about",
     templateUrl: "./about.component.html",
     styleUrls: ["./about.component.scss"],
-    standalone: false
+    imports: [AsyncPipe]
 })
 export class AboutComponent {
 	private store: Store = inject(Store);
