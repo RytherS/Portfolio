@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectInfoComponent } from './components';
 
 const routes: Routes = [
 	{
 		path: '',
-		component: ProjectInfoComponent,
+		loadComponent: () => import('./components/project-info/project-info.component').then(mod => mod.ProjectInfoComponent),
 	},
 ];
 

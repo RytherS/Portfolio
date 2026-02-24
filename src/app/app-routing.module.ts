@@ -10,42 +10,42 @@ const routes: Routes = [
 	{
 		path: 'home',
 		loadChildren: () =>
-			import('./modules/home/home.module').then((m) => m.HomeModule),
+			import('./modules/home/home-routing.module').then((m) => m.HomeRoutingModule),
 	},
 	{
 		path: 'portfolio',
 		loadChildren: () =>
-			import('./modules/portfolio/portfolio.module').then(
-				(m) => m.PortfolioModule,
+			import('./modules/portfolio/portfolio-routing.module').then(
+				(m) => m.PortfolioRoutingModule,
 			),
 	},
 	{
 		path: 'projectInfo',
 		loadChildren: () =>
-			import('./modules/project-info/project-info.module').then(
-				(m) => m.ProjectInfoModule,
+			import('./modules/project-info/project-info-routing.module').then(
+				(m) => m.ProjectInfoRoutingModule,
 			),
 	},
 	{
 		path: 'contact',
 		loadChildren: () =>
-			import('./modules/contact/contact.module').then(
-				(m) => m.ContactModule,
+			import('./modules/contact/contact-routing.module').then(
+				(m) => m.ContactRoutingModule,
 			),
 	},
 	{
 		path: 'about',
 		loadChildren: () =>
-			import('./modules/about/about.module').then((m) => m.AboutModule),
+			import('./modules/about/about-routing.module').then((m) => m.AboutRoutingModule),
 		pathMatch: 'prefix',
 	},
 	{
 		path: 'error',
 		loadChildren: () =>
-			import('./modules/error/error.module').then((m) => m.ErrorModule),
+			import('./modules/error/error-routing.module').then((m) => m.ErrorRoutingModule),
 	},
 	{
-		path: '*',
+		path: '**',
 		redirectTo: 'error',
 	},
 ];
