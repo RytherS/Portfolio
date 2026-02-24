@@ -1,45 +1,27 @@
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--default-spacing);
-	
-    height: var(--header-height);
-    padding-right: var(--default-spacing);
-    background-color: var(--sr-palette-black);
-    border-bottom: 1px solid var(--sr-palette-dark-grey);
+@use '@global-stylesheets/_style-vars.scss' as vars;
 
-    &__nav {
-        display: flex;
-        align-items: center;
-    }
-
-    &__logo {
-        height: var(--header-height);
-        width: var(--header-height);
-    }
+.header{
+    height: vars.$header-height;
+    background-color: vars.$sr-palette-black;
+    border-bottom: 1px solid vars.$sr-palette-dark-grey;
 
     &__tab {
         width: 200px;
-        height: var(--header-height);
-        color: var(--sr-palette-white);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-right: solid 1px var(--sr-palette-dark-grey);
-        gap: 5px;
+        height: vars.$header-height;
+        color: vars.$sr-palette-white;
+        border-right: solid 1px vars.$sr-palette-dark-grey;
         cursor: pointer;
 
         & > .html-bracket {
-            color: var(--sr-palette-red);
+            color: vars.$sr-palette-red;
         }
 
         &:hover {
-            background-color: var(--sr-palette-extra-dark-grey);
+            background-color: vars.$sr-palette-extra-dark-grey;
         }
 
         &--active {
-            background-color: var(--sr-palette-extra-dark-grey);
+            background-color: vars.$sr-palette-extra-dark-grey;
             font-weight: bold;
         }
     }

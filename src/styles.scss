@@ -1,36 +1,13 @@
-@use './reset.scss';
-
-:root {
-    --sr-palette-black: #1E1E1E;
-    --sr-palette-extra-dark-grey: #3b3b3b;
-    --sr-palette-dark-grey: #646464;
-    --sr-palette-light-grey: #C8C8C8;
-    --sr-palette-extra-light-grey: #F0F0F0;
-    --sr-palette-white: #FAFAFA;
-    --sr-palette-red: #FF9696;
-    --sr-palette-green: #C8FFC8;
-    --sr-palette-blue: #64C8FF;
-    --sr-palette-purple: #C896FF;
-
-    --default-spacing: 15px;
-
-    --header-height: 50px;
-}
+@use './global-stylesheets/_style-vars.scss' as vars;
 
 * {
     font-family: 'Consolas';
 }
 
 html, body {
-    background-color: var(--sr-palette-extra-dark-grey);
-    color: var(--sr-palette-white);
+    background-color: vars.$sr-palette-extra-dark-grey;
+    color: vars.$sr-palette-white;
     font-size: 14px;
-}
-
-.app-content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--default-spacing);
 }
 
 .logo-icon {

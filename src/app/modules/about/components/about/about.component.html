@@ -1,8 +1,9 @@
-@if ({
-  routeRoot: tempRootRoute$ | async
-  }; as pageData) {
-  <div class="app-content">
-    <p>about works!</p>
-    <p>Root Route: {{pageData.routeRoot}}</p>
-  </div>
+@if (
+	{
+		routeRoot: tempRootRoute$ | async,
+	};
+	as pageData
+) {
+	<p>about works!</p>
+	<p>Root Route: {{ pageData.routeRoot }}</p>
 }
