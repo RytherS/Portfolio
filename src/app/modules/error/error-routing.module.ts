@@ -6,7 +6,7 @@ import { ErrorComponent } from './components';
 const routes: Routes = [
 	{
 		path: '',
-		component: ErrorComponent
+		loadComponent: () => import('./components/error/error.component').then(mod => mod.ErrorComponent)
 	}
 ];
 

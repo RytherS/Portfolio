@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './components';
 
 const routes: Routes = [
 	{
 		path: '',
-		component: ContactComponent,
+		loadComponent: () => import('./components/contact/contact.component').then(mod => mod.ContactComponent),
 	},
 ];
 

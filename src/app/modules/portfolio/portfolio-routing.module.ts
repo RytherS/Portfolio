@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PortfolioComponent } from './components';
 
 const routes: Routes = [
 	{
 		path: '',
-		component: PortfolioComponent,
+		loadComponent: () => import('./components/portfolio/portfolio.component').then(mod => mod.PortfolioComponent),
 	},
 ];
 
