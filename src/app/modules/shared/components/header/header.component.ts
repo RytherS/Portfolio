@@ -1,21 +1,27 @@
-import { AsyncPipe, KeyValuePipe, NgClass } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { KeyValuePipe, NgClass } from '@angular/common';
+import { Component, computed, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterSelectors } from '@core/state/router-state';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { HeaderComponentVm } from './models/header-component-vm.model';
 
 @Component({
 	selector: 'sr-header',
 	templateUrl: './header.component.html',
 	styleUrls: ['./header.component.scss'],
-	imports: [NgClass, AsyncPipe, KeyValuePipe],
+	imports: [NgClass, KeyValuePipe],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 	private router: Router = inject(Router);
 	private store: Store = inject(Store);
 
-	public currentRootRoute$!: Observable<string>;
+	private currentRootRoute = this.store.selectSignal(
+		RouterSelectors.selectRouteRoot,
+	);
+
+	public vm = computed<HeaderComponentVm>(() => ({
+		currentRootRoute: this.currentRootRoute(),
+	}));
 
 	public readonly bracketString = '<>';
 
@@ -28,12 +34,6 @@ export class HeaderComponent implements OnInit {
 		['/contact', 'Contact'],
 		['/about', 'About'],
 	]);
-
-	public ngOnInit(): void {
-		this.currentRootRoute$ = this.store.select(
-			RouterSelectors.selectRouteRoot,
-		);
-	}
 
 	public onNavTabClicked(route: string): void {
 		this.router.navigate([route]);
