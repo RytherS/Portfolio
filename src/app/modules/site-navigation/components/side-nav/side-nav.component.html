@@ -1,6 +1,15 @@
 <div id="toggle-container" class="flex-row flex-full-center">
 	<sr-icon-button
-		[iconName]="toggleIconName"
+		id="toggle-button"
+		[ngClass]="{ rotate: isOpen }"
+		iconName="featherChevronRight"
 		(click)="toggleSideNav()"
 	></sr-icon-button>
+</div>
+
+<div #sideNav id="side-nav" class="flex-column">
+	<p>1</p>
+	<p>2</p>
+	<p>3</p>
+	<p>4</p>
 </div>

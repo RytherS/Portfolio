@@ -1,6 +1,29 @@
 @use '@global-stylesheets/_style-vars.scss' as vars;
 
+$_sidenav-transition: 0.25s ease-in-out;
+
 #toggle-container {
     width: vars.$header-height;
     height: vars.$header-height;
+
+    #toggle-button {
+        transition: $_sidenav-transition;
+    }
+
+    .rotate {
+        transform: rotate(90deg);
+    }
+}
+
+#side-nav {
+    position: absolute;
+    left: -1 * vars.$side-nav-width;
+    bottom: 0;
+    height: calc(100vh - vars.$header-height);
+    width: vars.$side-nav-width;
+
+    background-color: vars.$sr-palette-black;
+
+    // Smooth transition for opening and closing the side nav
+    transition: $_sidenav-transition
 }
