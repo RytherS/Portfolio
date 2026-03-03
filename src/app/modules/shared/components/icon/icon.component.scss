@@ -1,7 +1,7 @@
-$size: 32px;
+@use '@global-stylesheets/_style-vars.scss' as vars;
+@use "@global-stylesheets/_shared-classes.scss";
 
 .sr-icon {
-    width: $size;
-    height: $size;
+    @extend %icon-container;
     object-fit: scale-down;
 }

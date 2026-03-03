@@ -28,6 +28,7 @@
 						"styles": [
 							"src/global-stylesheets/_reset.scss",
 							"src/global-stylesheets/_layout-utils.scss",
+							"src/global-stylesheets/_shared-classes.scss",
 							"src/styles.scss"
 						],
 						"scripts": [],

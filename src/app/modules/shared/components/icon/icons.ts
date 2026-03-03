@@ -3,6 +3,7 @@ import {
 	featherMenu,
 	featherCode,
 	featherLinkedin,
+	featherChevronDown,
 } from '@ng-icons/feather-icons';
 
 export const srIcons = {
@@ -10,4 +11,5 @@ export const srIcons = {
 	featherMenu,
 	featherCode,
 	featherLinkedin,
+	featherChevronDown,
 };

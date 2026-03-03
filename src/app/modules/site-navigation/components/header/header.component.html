@@ -1,13 +1,13 @@
-<div
-	class="header flex-row flex-align-center flex-justify-space-between gap-15 pr-15"
->
-	<div class="flex-row flex-align-center">
+<div class="header">
+	<sr-side-nav></sr-side-nav>
+
+	<div class="flex-row flex-align-center full-height">
 		@for (
 			routeMapping of navRouteMappings | keyvalue: originalOrder;
 			track routeMapping
 		) {
 			<div
-				class="header__tab flex-row flex-full-center gap-5"
+				class="header__tab flex-row flex-full-center gap-5 full-height"
 				[ngClass]="{
 					'header__tab--active':
 						vm().currentRootRoute == routeMapping.key,
@@ -19,7 +19,7 @@
 			</div>
 		}
 	</div>
-	<div class="socials-container">
+	<div class="flex-row flex-align-center full-height gap-10 pr-15">
 		<sr-icon-button
 			href="https://www.linkedin.com/in/sryther/"
 			iconName="featherLinkedin"

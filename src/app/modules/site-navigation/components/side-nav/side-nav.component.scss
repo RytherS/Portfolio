@@ -1,0 +1,6 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+
+#toggle-container {
+    width: vars.$header-height;
+    height: vars.$header-height;
+}
