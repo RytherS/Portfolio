@@ -11,5 +11,12 @@ $sr-palette-blue: #64C8FF;
 $sr-palette-purple: #C896FF;
 //#endregion Color Palette
 
+//#region Element Sizing/Spacing
 $header-height: 50px;
+$side-nav-width: 250px;
+
+$icon-max-size: 32px;
 $default-spacing: 15px;
+//#endregion Element Sizing/Spacing
+
+$default-border: 1px solid $sr-palette-dark-grey;

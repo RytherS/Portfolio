@@ -1,0 +1,7 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+@use "@global-stylesheets/_shared-classes.scss";
+
+.sr-icon {
+    @extend %icon-container;
+    object-fit: scale-down;
+}

@@ -1,0 +1,21 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+
+.header{
+    height: vars.$header-height;
+    background-color: vars.$sr-palette-black;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    &__tab {
+        width: 100%;
+        max-width: 200px;
+        height: inherit; // Take up the full height of the header
+
+        &:first-child {
+            // Add a border to the left of the first tab to match other tabs and separate it from the side nav
+            border-left: vars.$default-border;
+        }
+    }
+}

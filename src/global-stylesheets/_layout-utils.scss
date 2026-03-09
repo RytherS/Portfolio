@@ -1,3 +1,5 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+
 .full-width {
     width: 100%;
 }
@@ -35,6 +37,22 @@
 .flex-full-center {
     align-items: center;
     justify-content: center;
+}
+
+.border-l {
+    border-left: vars.$default-border;
+}
+
+.border-r {
+    border-right: vars.$default-border;
+}
+
+.border-t {
+    border-top: vars.$default-border;
+}
+
+.border-b {
+    border-bottom: vars.$default-border;
 }
 
 @for $i from 1 through 10 {

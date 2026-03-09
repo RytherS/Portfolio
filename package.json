@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^21.1.4",
     "@angular/platform-browser-dynamic": "^21.1.4",
     "@angular/router": "^21.1.4",
+    "@ng-icons/core": "^33.1.0",
+    "@ng-icons/feather-icons": "^33.1.0",
     "@ngrx/component-store": "^21.0.1",
     "@ngrx/effects": "^21.0.1",
     "@ngrx/router-store": "^21.0.1",

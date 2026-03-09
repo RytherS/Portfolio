@@ -1,0 +1,13 @@
+@use "./style-vars.scss" as vars;
+
+%icon-container {
+    // Icons should be *up to* the max icon size, but scale down to fit smaller containers.
+    width: 100%;
+    height: 100%;
+    max-width: vars.$icon-max-size;
+    max-height: vars.$icon-max-size;
+}
+
+.hidden {
+    display: none;
+}

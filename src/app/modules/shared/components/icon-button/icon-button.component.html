@@ -1,0 +1,18 @@
+@if (href != null) {
+	<a
+		class="icon-link"
+		[href]="href"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
+	</a>
+} @else {
+	<button class="icon-button">
+		<ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
+	</button>
+}
+
+<ng-template #iconTemplate>
+	<sr-icon [iconName]="iconName"></sr-icon>
+</ng-template>
