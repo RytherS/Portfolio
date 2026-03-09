@@ -1,23 +1,20 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { IconButtonComponent } from '@modules/shared/components/icon-button/icon-button.component';
+import { IconButtonComponent, IconComponent } from '@modules/shared/components';
 import { CommonModule } from '@angular/common';
+import { BaseNavigationComponent } from '../base-navigation-component';
 
 @Component({
 	selector: 'sr-side-nav',
-	imports: [IconButtonComponent, CommonModule],
+	imports: [IconButtonComponent, IconComponent, CommonModule],
 	templateUrl: './side-nav.component.html',
-	styleUrl: './side-nav.component.scss',
+	styleUrls: ['./side-nav.component.scss', '../_shared-nav-styling.scss'],
 })
-export class SideNavComponent {
+export class SideNavComponent extends BaseNavigationComponent {
 	@ViewChild('sideNav') sideNav!: ElementRef;
 
 	public isOpen = false;
 	public get isClosed() {
 		return !this.isOpen;
-	}
-
-	public get toggleIconName() {
-		return this.isOpen ? 'featherChevronDown' : 'featherMenu';
 	}
 
 	toggleSideNav() {
@@ -30,7 +27,6 @@ export class SideNavComponent {
 
 	open() {
 		this.isOpen = true;
-		console.log(this.sideNav);
 		this.sideNav.nativeElement.style.left = '0px';
 	}
 
@@ -38,5 +34,10 @@ export class SideNavComponent {
 		this.isOpen = false;
 		const sideNavWidth = this.sideNav.nativeElement.offsetWidth;
 		this.sideNav.nativeElement.style.left = `-${sideNavWidth}px`;
+	}
+
+	override navigateToRoute(route: string): void {
+		super.navigateToRoute(route);
+		this.close();
 	}
 }

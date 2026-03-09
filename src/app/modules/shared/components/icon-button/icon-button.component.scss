@@ -2,6 +2,7 @@
 
 .icon-link {
     @extend %icon-container;
+    cursor: pointer;
     display: inline-block;
     color: inherit;
     text-decoration: none;
@@ -9,6 +10,7 @@
 
 .icon-button {
     @extend %icon-container;
+    cursor: pointer;
     color: inherit;
     background: none;
     border: none;

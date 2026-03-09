@@ -1,4 +1,4 @@
-<div id="toggle-container" class="flex-row flex-full-center">
+<div id="toggle-button-container" class="flex-row flex-full-center">
 	<sr-icon-button
 		id="toggle-button"
 		[ngClass]="{ rotate: isOpen }"
@@ -7,9 +7,20 @@
 	></sr-icon-button>
 </div>
 
-<div #sideNav id="side-nav" class="flex-column">
-	<p>1</p>
-	<p>2</p>
-	<p>3</p>
-	<p>4</p>
+<div #sideNav class="side-nav flex-column border-r">
+	@for (
+		routeMapping of vm().navRouteMappings | keyvalue: originalOrder;
+		track routeMapping
+	) {
+		<div
+			class="side-nav__link nav-link flex-row flex-align-center gap-5 pl-5 full-width"
+			[ngClass]="{
+				'nav-link--active': vm().currentRootRoute == routeMapping.key,
+			}"
+			(click)="navigateToRoute(routeMapping.key)"
+		>
+			<sr-icon iconName="featherCode" class="html-bracket"></sr-icon>
+			<p>{{ routeMapping.value }}.html</p>
+		</div>
+	}
 </div>

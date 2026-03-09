@@ -7,35 +7,15 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    border-bottom: 1px solid vars.$sr-palette-dark-grey;
-
 
     &__tab {
-        $_tab-border: solid 1px vars.$sr-palette-dark-grey;
-
-        width: 200px;
+        width: 100%;
+        max-width: 200px;
         height: inherit; // Take up the full height of the header
-        border-right: $_tab-border;
-        cursor: pointer;
 
         &:first-child {
             // Add a border to the left of the first tab to match other tabs and separate it from the side nav
-            border-left: $_tab-border;
-        }
-
-        & > .html-bracket {
-            display: flex; // Fixes the issue of the brackets not being vertically centered
-            color: vars.$sr-palette-red;
-            height: 1em;
-        }
-
-        &:hover {
-            background-color: vars.$sr-palette-extra-dark-grey;
-        }
-
-        &--active {
-            background-color: vars.$sr-palette-extra-dark-grey;
-            font-weight: bold;
+            border-left: vars.$default-border;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 $_sidenav-transition: 0.25s ease-in-out;
 
-#toggle-container {
+#toggle-button-container {
     width: vars.$header-height;
     height: vars.$header-height;
 
@@ -15,7 +15,7 @@ $_sidenav-transition: 0.25s ease-in-out;
     }
 }
 
-#side-nav {
+.side-nav {
     position: absolute;
     left: -1 * vars.$side-nav-width;
     bottom: 0;
@@ -25,5 +25,9 @@ $_sidenav-transition: 0.25s ease-in-out;
     background-color: vars.$sr-palette-black;
 
     // Smooth transition for opening and closing the side nav
-    transition: $_sidenav-transition
+    transition: $_sidenav-transition;
+
+    &__link {
+        height: 40px;
+    }
 }

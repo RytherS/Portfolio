@@ -1,25 +1,29 @@
-<div class="header">
-	<sr-side-nav></sr-side-nav>
+<div class="header border-b">
+	<!-- Wrapping in div to preserve grid layout on mobile -->
+	<div>
+		<sr-side-nav [ngClass]="{ hidden: !vm().isMobileScreen }"></sr-side-nav>
+	</div>
 
 	<div class="flex-row flex-align-center full-height">
 		@for (
-			routeMapping of navRouteMappings | keyvalue: originalOrder;
+			routeMapping of vm().navRouteMappings | keyvalue: originalOrder;
 			track routeMapping
 		) {
 			<div
-				class="header__tab flex-row flex-full-center gap-5 full-height"
+				class="header__tab nav-link border-r flex-row flex-full-center gap-5 full-height"
 				[ngClass]="{
-					'header__tab--active':
+					'nav-link--active':
 						vm().currentRootRoute == routeMapping.key,
+					hidden: vm().isMobileScreen,
 				}"
-				(click)="onNavTabClicked(routeMapping.key)"
+				(click)="navigateToRoute(routeMapping.key)"
 			>
 				<sr-icon iconName="featherCode" class="html-bracket"></sr-icon>
 				<p>{{ routeMapping.value }}.html</p>
 			</div>
 		}
 	</div>
-	<div class="flex-row flex-align-center full-height gap-10 pr-15">
+	<div class="flex-row flex-align-center full-height gap-10 px-15">
 		<sr-icon-button
 			href="https://www.linkedin.com/in/sryther/"
 			iconName="featherLinkedin"

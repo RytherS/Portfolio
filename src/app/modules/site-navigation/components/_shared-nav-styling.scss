@@ -1,0 +1,20 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+
+.nav-link {
+    cursor: pointer;
+
+    &:hover {
+        background-color: vars.$sr-palette-extra-dark-grey;
+    }
+
+    &--active {
+        background-color: vars.$sr-palette-extra-dark-grey;
+        font-weight: bold;
+    }
+}
+
+.html-bracket {
+    display: flex; // Fixes the issue of the brackets not being vertically centered
+    color: vars.$sr-palette-red;
+    height: 1em;
+}
