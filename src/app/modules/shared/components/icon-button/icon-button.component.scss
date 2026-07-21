@@ -1,17 +1,25 @@
 @use "@global-stylesheets/_shared-classes.scss";
+@use "@global-stylesheets/_style-vars.scss" as vars;
 
-.icon-link {
+// Enforce icon sizing on host element to prevent misalignment
+:host {
     @extend %icon-container;
-    cursor: pointer;
-    display: inline-block;
-    color: inherit;
-    text-decoration: none;
 }
 
-.icon-button {
+.clickable-icon {
     @extend %icon-container;
+
     cursor: pointer;
-    color: inherit;
+    color: inherit; // Allow setting color externally
+    font-size: vars.$icon-max-size; // Bump clickable icon font size for accessibility/visibility
+}
+
+a.clickable-icon {
+    text-decoration: none;
+    display: inline-block;
+}
+
+button.clickable-icon {
     background: none;
     border: none;
 }

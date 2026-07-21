@@ -1,0 +1,8 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+
+.button {
+    border: vars.$default-border;
+    border-radius: vars.$default-border-radius;
+    border-width: 2px;
+    background-color: vars.$sr-palette-blue;
+}

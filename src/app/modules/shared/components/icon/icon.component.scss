@@ -1,7 +1,6 @@
-@use '@global-stylesheets/_style-vars.scss' as vars;
 @use "@global-stylesheets/_shared-classes.scss";
 
-.sr-icon {
+// Enforce icon sizing on host element to prevent misalignment
+:host {
     @extend %icon-container;
-    object-fit: scale-down;
 }

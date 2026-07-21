@@ -1,6 +1,6 @@
 @if (href != null) {
 	<a
-		class="icon-link"
+		class="clickable-icon"
 		[href]="href"
 		target="_blank"
 		rel="noopener noreferrer"
@@ -8,7 +8,7 @@
 		<ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
 	</a>
 } @else {
-	<button class="icon-button">
+	<button class="clickable-icon">
 		<ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
 	</button>
 }
