@@ -39,6 +39,11 @@
     justify-content: center;
 }
 
+.border {
+    border: vars.$default-border;
+    border-radius: vars.$default-border-radius;
+}
+
 .border-l {
     border-left: vars.$default-border;
 }

@@ -1,0 +1,54 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+@use "@global-stylesheets/_shared-classes.scss";
+
+$max-width: 1000px;
+
+.content-card {
+    max-width: $max-width;
+    min-width: 300px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+
+    & .image-container {
+        max-width: 33%;
+    }
+    
+    &__image {
+        border-radius: vars.$default-border-radius;
+        box-shadow: vars.$default-box-shadow;
+    }
+    
+    &__text {
+        background-color: vars.$sr-palette-black;
+        border-radius: vars.$default-border-radius;
+        box-shadow: vars.$default-box-shadow;
+        text-align: center;
+    }
+    
+    &__title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-align: left;
+        color: vars.$sr-palette-blue;
+    }
+
+    &--mobile {
+        & .image-container {
+            max-width: 100%;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scaleY(97%);
+        opacity: 0;
+    }
+    90% {
+        transform: scaleY(100%);
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
