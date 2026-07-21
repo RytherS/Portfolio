@@ -1,11 +1,14 @@
 @use "./style-vars.scss" as vars;
 
 %icon-container {
+    display: inline-block; // Ensure the container respects the sizing below
+
     // Icons should be *up to* the max icon size, but scale down to fit smaller containers.
     width: 100%;
     height: 100%;
     max-width: vars.$icon-max-size;
     max-height: vars.$icon-max-size;
+    line-height: 1; // Prevent "text" overflow and ensure consistent vertical alignment
 }
 
 .hidden {
