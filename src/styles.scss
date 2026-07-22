@@ -7,5 +7,10 @@
 html, body {
     background-color: vars.$sr-palette-extra-dark-grey;
     color: vars.$sr-palette-white;
-    font-size: 16px;
+    font-size: vars.$default-font-size;
+}
+
+a {
+    color: vars.$sr-palette-blue;
+    text-decoration: underline;
 }

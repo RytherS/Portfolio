@@ -6,14 +6,17 @@ $sr-palette-light-grey: #C8C8C8;
 $sr-palette-extra-light-grey: #F0F0F0;
 $sr-palette-white: #FAFAFA;
 $sr-palette-red: #FF9696;
-$sr-palette-green: #C8FFC8;
+$sr-palette-green: #AAFFAA;
 $sr-palette-blue: #64C8FF;
 $sr-palette-purple: #C896FF;
 //#endregion Color Palette
 
 //#region Element Sizing/Spacing
+$mobile-breakpoint: 800px;
+$default-font-size: 16px;
 $header-height: 50px;
 $side-nav-width: 250px;
+$max-content-width: 1000px;
 
 $icon-max-size: 32px;
 $default-spacing: 15px;
@@ -22,3 +25,8 @@ $default-spacing: 15px;
 $default-box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.33);
 $default-border: 1px solid $sr-palette-dark-grey;
 $default-border-radius: 5px;
+
+/* Mobile devices (phones) */
+@media screen and (max-width: $mobile-breakpoint) {
+    $max-content-width: 500px;
+}

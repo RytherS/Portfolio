@@ -1,7 +1,6 @@
 import { KeyValuePipe, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { IconComponent } from '@modules/shared/components/icon/icon.component';
-import { IconButtonComponent } from '@modules/shared/components/icon-button/icon-button.component';
+import { IconButtonComponent, IconComponent } from '@modules/shared/components';
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { BaseNavigationComponent } from '../base-navigation-component';
 

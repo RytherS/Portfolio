@@ -4,3 +4,8 @@
 :host {
     @extend %icon-container;
 }
+
+ng-icon, ng-icon * {
+    width: 100%;
+    height: 100%;
+}

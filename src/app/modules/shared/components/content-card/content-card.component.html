@@ -1,39 +1,37 @@
 <div
 	class="content-card flex-row flex-align-center full-width gap-15 p-10"
 	[ngClass]="{
-		'content-card--mobile': vm().isMobileScreen,
-		'flex-column': vm().isMobileScreen,
+		'content-card--mobile': isMobileScreen(),
+		'flex-column': isMobileScreen(),
 	}"
 >
-	@if (vm().image && vm().imagePosition === "left" && !vm().isMobileScreen) {
+	@if (image && imagePosition === "left" && !isMobileScreen()) {
 		<div class="image-container flex-column flex-full-center">
 			<img
 				class="content-card__image full-width"
-				[src]="vm().image"
+				[src]="image"
 				alt="Content Card Image"
 			/>
 		</div>
 	}
 
 	<div class="content-card__text flex-column gap-10 p-10 full-width">
-		@if (vm().title) {
+		@if (title) {
 			<div class="content-card__title border-b">
-				<h3 class="pl-10">{{ vm().title }}</h3>
+				<h3 class="pl-10">{{ title }}</h3>
 			</div>
 		}
 
-		<div class="flex-column full-height flex-full-center m-10">
+		<div class="flex-column full-height flex-full-center gap-10 m-10">
 			<ng-content></ng-content>
 		</div>
 	</div>
 
-	@if (
-		vm().image && (vm().imagePosition === "right" || vm().isMobileScreen)
-	) {
+	@if (image && (imagePosition === "right" || isMobileScreen())) {
 		<div class="flex flex-full-center">
 			<img
 				class="content-card__image"
-				[src]="vm().image"
+				[src]="image"
 				alt="Content Card Image"
 			/>
 		</div>
