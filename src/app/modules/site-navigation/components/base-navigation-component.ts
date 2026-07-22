@@ -1,9 +1,9 @@
 import { computed, inject } from '@angular/core';
 import { NavRouteConstants } from '../constants';
 import { RouterSelectors } from '@core/state/router-state';
-import { WindowHelperService } from '@core/services/window-helper.service';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { ResponsiveComponent } from '@modules/shared/components';
 
 interface BaseNavigationComponentVm {
 	currentRootRoute: string;
@@ -11,10 +11,9 @@ interface BaseNavigationComponentVm {
 	isMobileScreen: boolean;
 }
 
-export abstract class BaseNavigationComponent {
+export abstract class BaseNavigationComponent extends ResponsiveComponent {
 	private router: Router = inject(Router);
 	private store: Store = inject(Store);
-	private windowHelper: WindowHelperService = inject(WindowHelperService);
 
 	private currentRootRoute = this.store.selectSignal(
 		RouterSelectors.selectRouteRoot,
@@ -23,7 +22,7 @@ export abstract class BaseNavigationComponent {
 	public vm = computed<BaseNavigationComponentVm>(() => ({
 		currentRootRoute: this.currentRootRoute(),
 		navRouteMappings: NavRouteConstants.navRouteMappings,
-		isMobileScreen: this.windowHelper.isMobileScreen(),
+		isMobileScreen: this.isMobileScreen(),
 	}));
 
 	public navigateToRoute(route: string): void {

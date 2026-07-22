@@ -4,3 +4,7 @@
     display: grid;
     grid-template-rows: auto 1fr;
 }
+
+#app-content > * {
+    max-width: vars.$max-content-width;
+}

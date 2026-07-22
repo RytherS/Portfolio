@@ -4,6 +4,7 @@ import {
 	featherLinkedin,
 	featherChevronRight,
 	featherMail,
+	featherPhone,
 } from '@ng-icons/feather-icons';
 
 export const srIcons = {
@@ -12,4 +13,5 @@ export const srIcons = {
 	featherLinkedin,
 	featherChevronRight,
 	featherMail,
+	featherPhone,
 };

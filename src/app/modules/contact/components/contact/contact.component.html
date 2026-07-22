@@ -1,1 +1,48 @@
-<p>contact works!</p>
+<div class="flex-column flex-full-center full-width gap-15">
+	<sr-content-card class="full-width" title="Want to say hello?">
+		<p>
+			I prefer email communication for first-time contacts, but feel free
+			to call/text if that's more convenient for you!
+			<br />
+			You can reach me using the contact information listed below.
+		</p>
+	</sr-content-card>
+
+	<div
+		class="contact-row flex-row gap-15"
+		[ngClass]="{ 'flex-column': isMobileScreen() }"
+	>
+		<sr-content-card>
+			<sr-icon-button
+				class="contact-icon"
+				href="mailto:sebastian.ryther@gmail.com"
+				iconName="featherMail"
+			>
+			</sr-icon-button>
+			<a href="mailto:sebastian.ryther@gmail.com">
+				<strong>sebastian.ryther@gmail.com</strong>
+			</a>
+		</sr-content-card>
+
+		<sr-content-card>
+			<sr-icon class="contact-icon" iconName="featherPhone"></sr-icon>
+			<p><strong>(308) 529-8674</strong></p>
+		</sr-content-card>
+
+		<sr-content-card>
+			<sr-icon-button
+				class="contact-icon"
+				href="https://www.linkedin.com/in/sryther/"
+				iconName="featherLinkedin"
+			>
+			</sr-icon-button>
+			<a
+				href="https://www.linkedin.com/in/sryther/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<strong>LinkedIn</strong>
+			</a>
+		</sr-content-card>
+	</div>
+</div>

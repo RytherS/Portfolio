@@ -1,0 +1,10 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+
+.contact-icon {
+	width: vars.$icon-max-size;
+	height: vars.$icon-max-size;
+}
+
+.contact-row {
+    max-width: vars.$max-content-width;
+}
