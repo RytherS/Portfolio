@@ -13,10 +13,10 @@ const routes: Routes = [
 			import('./modules/home/home-routing.module').then((m) => m.HomeRoutingModule),
 	},
 	{
-		path: 'portfolio',
+		path: 'projects',
 		loadChildren: () =>
-			import('./modules/portfolio/portfolio-routing.module').then(
-				(m) => m.PortfolioRoutingModule,
+			import('./modules/projects/projects-routing.module').then(
+				(m) => m.ProjectsRoutingModule,
 			),
 	},
 	{

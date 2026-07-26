@@ -1,8 +1,8 @@
 export const homeRoute = '/home';
 export const homeRouteLabel = 'Home';
 
-export const portfolioRoute = '/portfolio';
-export const portfolioRouteLabel = 'Portfolio';
+export const projectsRoute = '/projects';
+export const projectsRouteLabel = 'Projects';
 
 export const contactRoute = '/contact';
 export const contactRouteLabel = 'Contact';
@@ -12,7 +12,7 @@ export const aboutRouteLabel = 'About';
 
 export const navRouteMappings: Map<string, string> = new Map<string, string>([
 	[homeRoute, homeRouteLabel],
-	[portfolioRoute, portfolioRouteLabel],
+	[projectsRoute, projectsRouteLabel],
 	[contactRoute, contactRouteLabel],
 	[aboutRoute, aboutRouteLabel],
 ]);
