@@ -12,6 +12,13 @@
     cursor: pointer;
     color: inherit; // Allow setting color externally
     font-size: vars.$icon-max-size; // Bump clickable icon font size for accessibility/visibility
+
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        color: vars.$sr-palette-blue;
+    }
 }
 
 a.clickable-icon {
