@@ -1,0 +1,7 @@
+@use '@global-stylesheets/_style-vars.scss' as vars;
+
+
+.highlight {
+    display: inline;
+    color: vars.$sr-palette-purple;
+}
