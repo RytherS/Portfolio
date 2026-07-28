@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 	{
 		path: '',
-		loadComponent: () => import('./components/portfolio/portfolio.component').then(mod => mod.PortfolioComponent),
+		loadComponent: () => import('./components/projects/projects.component').then(mod => mod.ProjectsComponent),
 	},
 ];
 
@@ -12,4 +12,4 @@ const routes: Routes = [
 	imports: [RouterModule.forChild(routes)],
 	exports: [RouterModule],
 })
-export class PortfolioRoutingModule {}
+export class ProjectsRoutingModule {}

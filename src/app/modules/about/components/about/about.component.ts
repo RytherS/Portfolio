@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {
 	ContentCardComponent,
+	HighlightComponent,
 	ResponsiveComponent,
 } from '@modules/shared/components';
 
@@ -8,6 +9,6 @@ import {
 	selector: 'sr-about',
 	templateUrl: './about.component.html',
 	styleUrls: ['./about.component.scss'],
-	imports: [ContentCardComponent],
+	imports: [ContentCardComponent, HighlightComponent],
 })
 export class AboutComponent extends ResponsiveComponent {}

@@ -14,6 +14,7 @@
     &__image {
         border-radius: vars.$default-border-radius;
         box-shadow: vars.$default-box-shadow;
+        background-color: vars.$sr-palette-black;
     }
     
     &__text {
