@@ -1,4 +1,4 @@
-<div class="header border-b">
+<nav class="header border-b">
 	<!-- Wrapping in div to preserve grid layout on mobile -->
 	<div>
 		<sr-side-nav [ngClass]="{ hidden: !vm().isMobileScreen }"></sr-side-nav>
@@ -10,7 +10,7 @@
 			track routeMapping
 		) {
 			<div
-				class="header__tab nav-link border-r flex-row flex-full-center gap-5 full-height"
+				class="header__tab nav-link border-r flex-row flex-full-center full-height"
 				[ngClass]="{
 					'nav-link--active':
 						vm().currentRootRoute == routeMapping.key,
@@ -18,8 +18,13 @@
 				}"
 				(click)="navigateToRoute(routeMapping.key)"
 			>
-				<sr-icon iconName="featherCode" class="html-bracket"></sr-icon>
-				<p>{{ routeMapping.value }}.html</p>
+				<sr-icon
+					iconName="featherCode"
+					class="html-bracket mr-5"
+					aria-hidden="true"
+				></sr-icon>
+				<p>{{ routeMapping.value }}</p>
+				<p class="nav-link__file-extension" aria-hidden="true">.html</p>
 			</div>
 		}
 	</div>
@@ -35,4 +40,4 @@
 		>
 		</sr-icon-button>
 	</div>
-</div>
+</nav>

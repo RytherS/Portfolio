@@ -11,6 +11,10 @@
         background-color: vars.$sr-palette-extra-dark-grey;
         font-weight: bold;
     }
+
+    &__file-extension {
+        display: inline;
+    }
 }
 
 .html-bracket {
