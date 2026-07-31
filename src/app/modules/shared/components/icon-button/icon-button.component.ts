@@ -11,4 +11,5 @@ import { IconComponent } from '../icon/icon.component';
 export class IconButtonComponent {
 	@Input() iconName: string = IconComponent.defaultIcon;
 	@Input() href: string | null = null;
+	@Input() altText: string | null = null;
 }

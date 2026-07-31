@@ -18,7 +18,7 @@
 }
 
 .html-bracket {
-    display: flex; // Fixes the issue of the brackets not being vertically centered
     color: vars.$sr-palette-red;
     height: 1em;
+    width: 1em;
 }

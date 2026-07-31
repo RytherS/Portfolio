@@ -4,10 +4,11 @@
 		[ngClass]="{ rotate: isOpen }"
 		iconName="featherChevronRight"
 		(click)="toggleSideNav()"
+		altText="Navigation Menu Toggle"
 	></sr-icon-button>
 </div>
 
-<div #sideNav class="side-nav flex-column border-r">
+<nav #sideNav class="side-nav flex-column border-r" [aria-hidden]="!isOpen">
 	@for (
 		routeMapping of vm().navRouteMappings | keyvalue: originalOrder;
 		track routeMapping
@@ -28,4 +29,4 @@
 			<p class="nav-link__file-extension" aria-hidden="true">.html</p>
 		</div>
 	}
-</div>
+</nav>
