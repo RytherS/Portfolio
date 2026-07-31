@@ -4,23 +4,29 @@
 		[ngClass]="{ rotate: isOpen }"
 		iconName="featherChevronRight"
 		(click)="toggleSideNav()"
+		altText="Navigation Menu Toggle"
 	></sr-icon-button>
 </div>
 
-<div #sideNav class="side-nav flex-column border-r">
+<nav #sideNav class="side-nav flex-column border-r" [aria-hidden]="!isOpen">
 	@for (
 		routeMapping of vm().navRouteMappings | keyvalue: originalOrder;
 		track routeMapping
 	) {
 		<div
-			class="side-nav__link nav-link flex-row flex-align-center gap-5 pl-5 full-width"
+			class="side-nav__link nav-link flex-row flex-align-center pl-5 full-width"
 			[ngClass]="{
 				'nav-link--active': vm().currentRootRoute == routeMapping.key,
 			}"
 			(click)="navigateToRoute(routeMapping.key)"
 		>
-			<sr-icon iconName="featherCode" class="html-bracket"></sr-icon>
-			<p>{{ routeMapping.value }}.html</p>
+			<sr-icon
+				iconName="featherCode"
+				class="html-bracket mr-5"
+				aria-hidden="true"
+			></sr-icon>
+			<p>{{ routeMapping.value }}</p>
+			<p class="nav-link__file-extension" aria-hidden="true">.html</p>
 		</div>
 	}
-</div>
+</nav>

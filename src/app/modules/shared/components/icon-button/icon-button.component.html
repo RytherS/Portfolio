@@ -4,15 +4,16 @@
 		[href]="href"
 		target="_blank"
 		rel="noopener noreferrer"
+		[aria-label]="altText"
 	>
 		<ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
 	</a>
 } @else {
-	<button class="clickable-icon">
+	<button class="clickable-icon" [aria-label]="altText">
 		<ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
 	</button>
 }
 
 <ng-template #iconTemplate>
-	<sr-icon [iconName]="iconName"></sr-icon>
+	<sr-icon [iconName]="iconName" aria-hidden="true"> </sr-icon>
 </ng-template>

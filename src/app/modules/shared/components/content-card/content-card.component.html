@@ -1,16 +1,16 @@
-<div
+<section
 	class="content-card flex-row flex-align-center full-width gap-15 p-10"
 	[ngClass]="{
 		'content-card--mobile': isMobileScreen(),
 		'flex-column': isMobileScreen(),
 	}"
 >
-	@if (image && imagePosition === "left" && !isMobileScreen()) {
+	@if (mediaConfig && mediaPosition === "left" && !isMobileScreen()) {
 		<div class="image-container flex-column flex-full-center">
 			<img
 				class="content-card__image full-width"
-				[src]="image"
-				alt="Content Card Image"
+				[src]="mediaConfig.srcUrl"
+				[alt]="mediaConfig.altText"
 			/>
 		</div>
 	}
@@ -27,13 +27,13 @@
 		</div>
 	</div>
 
-	@if (image && (imagePosition === "right" || isMobileScreen())) {
+	@if (mediaConfig && (mediaPosition === "right" || isMobileScreen())) {
 		<div class="image-container flex-column flex-full-center">
 			<img
 				class="content-card__image"
-				[src]="image"
-				alt="Content Card Image"
+				[src]="mediaConfig.srcUrl"
+				[alt]="mediaConfig.altText"
 			/>
 		</div>
 	}
-</div>
+</section>
