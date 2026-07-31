@@ -1,2 +1,2 @@
-# PortfolioSite
+# Portfolio
 Angular Portfolio Website
