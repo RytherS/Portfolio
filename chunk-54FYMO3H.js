@@ -1,0 +1,1 @@
+import{Gb as r,Wa as o,sb as n,tb as i}from"./chunk-QVYPS4L6.js";var s=(()=>{class t{static{this.\u0275fac=function(e){return new(e||t)}}static{this.\u0275cmp=o({type:t,selectors:[["sr-project-info"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"p"),r(1,"project-info works!"),i())},encapsulation:2})}}return t})();export{s as ProjectInfoComponent};

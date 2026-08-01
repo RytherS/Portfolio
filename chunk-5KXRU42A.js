@@ -1,0 +1,1 @@
+import{Gb as i,Wa as o,sb as r,tb as n}from"./chunk-QVYPS4L6.js";var a=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=o({type:e,selectors:[["sr-error"]],decls:2,vars:0,template:function(t,p){t&1&&(r(0,"p"),i(1,"error works!"),n())},encapsulation:2})}}return e})();export{a as ErrorComponent};
