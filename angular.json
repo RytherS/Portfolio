@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"PortfolioSite": {
+		"Portfolio": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -18,7 +18,7 @@
 					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": {
-							"base": "dist/portfolio-site"
+							"base": "dist/portfolio"
 						},
 						"index": "src/index.html",
 						"polyfills": ["zone.js"],
@@ -63,10 +63,10 @@
 					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "PortfolioSite:build:production"
+							"buildTarget": "Portfolio:build:production"
 						},
 						"development": {
-							"buildTarget": "PortfolioSite:build:development"
+							"buildTarget": "Portfolio:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -74,7 +74,7 @@
 				"extract-i18n": {
 					"builder": "@angular/build:extract-i18n",
 					"options": {
-						"buildTarget": "PortfolioSite:build"
+						"buildTarget": "Portfolio:build"
 					}
 				},
 				"test": {
@@ -89,7 +89,10 @@
 					}
 				},
 				"deploy": {
-					"builder": "angular-cli-ghpages:deploy"
+					"builder": "angular-cli-ghpages:deploy",
+					"options": {
+						"baseHref": "https://rythers.github.io/Portfolio/"
+					}
 				}
 			}
 		}
